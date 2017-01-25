@@ -14,6 +14,8 @@ pgrest:
   build: postgrest/
   ports:
     - "3000:3000"
+  links:
+    - db
   labels:
     com.joyent.package: g4-highcpu-512M
     triton.cns.services: test.pgrest
